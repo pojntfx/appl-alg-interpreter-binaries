@@ -18,4 +18,4 @@ gu install native-image
 # Create native binary
 mkdir -p staging
 native-image --static -jar build/libs/appl_alg_interpreter.jar
-mv appl_alg_interpreter staging/appl_alg_interpreter.linux-$(uname -m)
+mv appl_alg_interpreter staging/iappl.linux-$(uname -m)

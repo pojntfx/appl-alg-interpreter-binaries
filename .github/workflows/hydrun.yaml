@@ -18,8 +18,8 @@ jobs:
       - name: Set up Swap
         run: |
           dd if=/dev/zero of=/tmp/swapfile bs=1k count=4096k
-          mkswap /tmp/swapfiles/swapfile
-          swapon /tmp/swapfiles/swapfile
+          mkswap /tmp/swapfile
+          swapon /tmp/swapfile
       - name: Set up hydrun
         run: |
           curl -L -o /tmp/hydrun https://github.com/pojntfx/hydrun/releases/download/latest/hydrun.linux-$(uname -m)
