@@ -1,6 +1,6 @@
 # ApplAlgInterpreter Binaries
 
-Weekly builds for [Prof. Dr. Fridtjof Toenniessen's ApplAlgInterpreter](https://www.hdm-stuttgart.de/kontakt/suche_ergebnis_liste?Id=165).
+Weekly builds and source mirror for [Prof. Dr. Fridtjof Toenniessen's ApplAlgInterpreter](https://www.hdm-stuttgart.de/kontakt/suche_ergebnis_liste?Id=165).
 
 ![hydrun CI](https://github.com/pojntfx/appl-alg-interpreter-binaries/workflows/hydrun%20CI/badge.svg)
 
@@ -23,7 +23,7 @@ After installation, you can run ApplAlgInterpreter programs like so:
 $ iappl examples/Quersumme.apl
 ```
 
-See [examples](https://github.com/pojntfx/appl-alg-interpreter-binaries/blob/main/examples) for example programs and grammar.
+See [examples](https://github.com/pojntfx/appl-alg-interpreter-binaries/blob/main/examples) for more example programs and grammar.
 
 ## License
 
