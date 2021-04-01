@@ -8,7 +8,11 @@ apt install -y curl build-essential libz-dev zlib1g-dev default-jdk gradle
 ./gradlew build
 
 # Install GraalVM
-curl -L -o /tmp/graalvm.tar.gz https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.0.0.2/graalvm-ce-java11-linux-amd64-21.0.0.2.tar.gz
+if [ "$(uname -m)" = 'x86_64' ]; then
+    curl -L -o /tmp/graalvm.tar.gz https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.0.0.2/graalvm-ce-java11-linux-amd64-21.0.0.2.tar.gz
+else
+    curl -L -o /tmp/graalvm.tar.gz https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.0.0.2/graalvm-ce-java11-linux-aarch64-21.0.0.2.tar.gz
+fi
 mkdir -p /opt/graalvm
 tar -C /opt/graalvm -xzf /tmp/graalvm.tar.gz
 export PATH="/opt/graalvm/graalvm-ce-java11-21.0.0.2/bin/:$PATH"
