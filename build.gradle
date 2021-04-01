@@ -1,0 +1,17 @@
+apply plugin : "java" 
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'ApplAlgInterpreter',
+                   'Implementation-Version': '1.0.0',
+                   'Main-Class': 'appl_alg_interpreter.ApplAlgInterpreter'
+    }
+}
+
+sourceSets {
+   main {
+       java {
+           srcDirs 'src'
+       }
+   }
+}
