@@ -17,11 +17,13 @@ $ sudo install /tmp/iappl /usr/local/bin
 
 ## Usage
 
-After installation, you can run APL code like so:
+After installation, you can run ApplAlgInterpreter programs like so:
 
 ```shell
 $ iappl examples/Quersumme.apl
 ```
+
+See [examples](https://github.com/pojntfx/appl-alg-interpreter-binaries/blob/main/examples) for example programs and grammar.
 
 ## License
 
