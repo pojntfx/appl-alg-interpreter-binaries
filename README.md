@@ -11,8 +11,8 @@ Binaries of the latest known release are built weekly and uploaded to [GitHub re
 You can install them like so:
 
 ```shell
-$ curl -L -o /tmp/appl_alg_interpreter https://github.com/pojntfx/appl-alg-interpreter-binaries/releases/download/latest/appl_alg_interpreter.linux-$(uname -m)
-$ sudo install /tmp/appl_alg_interpreter /usr/local/bin
+$ curl -L -o /tmp/iappl https://github.com/pojntfx/appl-alg-interpreter-binaries/releases/download/latest/iappl.linux-$(uname -m)
+$ sudo install /tmp/iappl /usr/local/bin
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ $ sudo install /tmp/appl_alg_interpreter /usr/local/bin
 After installation, you can run APL code like so:
 
 ```shell
-$ appl_alg_interpreter examples/Quersumme.apl
+$ iappl examples/Quersumme.apl
 ```
 
 ## License
