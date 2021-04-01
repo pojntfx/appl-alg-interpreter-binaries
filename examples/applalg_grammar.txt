@@ -1,0 +1,58 @@
+
+// Production rules:
+// -----------------
+
+program ::=         fileusage* function+
+
+fileusage ::=		use filename  // Funktionen aus anderer Datei holen (rekursiv möglich)
+
+function ::=        name ( formal_params ) = expression
+
+formal_params ::=   empty |
+                    name { , name }*
+
+expression ::=      function_call |
+                    value |
+                    variable |
+                    
+                    expression operator expression |     // Mit Operator Precedence
+                    ( expression ) |
+                    
+                    if expression then expression else expression endif |
+                    - expression |
+                    ! expression |	// Negation (nur bei boolean expressions)
+
+                    list |		// [] oder ['a', 'b', 'c'] oder [1E20, [1,2,3], 'c']
+                    length ( expression ) |	// Länge von expr, falls es eine
+						// Liste (oder ein String) ist
+                    expression [ expression { , expression }* ]  
+				// indizierte Expression, alle Expressions können 
+                                // (Mehrfach-)Indizes tragen, falls sie Arrays sind.
+                                // Zuweisung zu einer 3-dim. Liste: ( value -> list[2,5,1] )
+                                // Strings können grundsätzlich als char-Arrays gesehen werden:
+                                // 'Hallo'[1] = 'a'
+                    
+list ::=	    [ ] | [ expression { , expression }* ]			                    
+
+function_call ::=   name ( actual_params )
+
+actual_params ::=   empty |
+                    expression { , expression }*
+
+variable ::=        name
+
+// Regular expressions for tokens:
+// ------
+
+name ::= 	[a-zA-Z_][a-zA-Z_0-9]*
+value ::= 	( (-?[0-9]+(\\.[0-9]*)?) | (-?\\.[0-9]+) )(E-?[0-9]+)?  |  '[^']*' | true | false
+
+operator ::= 	>= | <= | -> | != | [\\+\\-\\*/%=<>] | ^ | and | or | //         
+
+filename ::=	[/a-zA-Z_][/.a-zA-Z_0-9]*
+
+
+
+
+
+
