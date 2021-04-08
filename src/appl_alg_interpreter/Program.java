@@ -46,10 +46,10 @@ public class Program {
 		return ret;
 	}
 	
-	public void parseFiles() throws Exception {
+	public void parseFiles(Boolean debug) throws Exception {
 		for (int i=0; i<files.size(); i++) {
 			ApplAlgParser parser;
-			parser = new ApplAlgParser(files.get(i));
+			parser = new ApplAlgParser(files.get(i), debug);
 			Program p = parser.parse();
 			Hashtable<String,Function> new_functions = p.functions;
 			Enumeration<String> names = new_functions.keys();

@@ -13,9 +13,12 @@ public class ApplAlgParser {
 	ProgramScanner psc;
 	File file;
 
-	public ApplAlgParser (File file) throws Exception {
+	private Boolean debug;
+
+	public ApplAlgParser (File file, Boolean debug) throws Exception {
 		this.file = file;
 		psc = new ProgramScanner(file);
+		this.debug = debug;
 	}
 	
 	public Program parse() {
@@ -26,7 +29,11 @@ public class ApplAlgParser {
 			System.out.println(e.getMessage());
 			System.exit(-1);
 		}
-		System.out.println("Parsing " + file + " done.");
+
+		if (this.debug) {
+			System.out.println("Parsing " + file + " done.");
+		}
+
 		return p;
 	}
 	
@@ -50,7 +57,7 @@ public class ApplAlgParser {
 		}
 		
 		Program p = new Program(main, functions, files);
-		p.parseFiles();		
+		p.parseFiles(this.debug);		
 		return p;
 	}
 	

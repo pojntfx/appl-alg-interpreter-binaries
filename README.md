@@ -23,6 +23,20 @@ After installation, you can run ApplAlgInterpreter programs like so:
 $ iappl examples/Quersumme.apl
 ```
 
+Additionally, you can set the following environment variables for additional debugging output:
+
+| Variable                     | Description                            |
+| ---------------------------- | -------------------------------------- |
+| `IAPPL_DEBUG_PARSER=true`    | Show parser debug output               |
+| `IAPPL_PRINT_FUNCTIONS=true` | Show function trace                    |
+| `IAPPL_COUNT_FUNCTIONS=true` | Count the amount of executed functions |
+
+Use them like so:
+
+```shell
+$ IAPPL_DEBUG_PARSER=true IAPPL_DEBUG_PARSER=true iappl examples/Quersumme.apl
+```
+
 See [examples](https://github.com/pojntfx/appl-alg-interpreter-binaries/blob/main/examples) for more example programs and grammar.
 
 ## License
