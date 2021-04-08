@@ -5,7 +5,7 @@ import java.util.Hashtable;
 
 import appl_alg_interpreter.ApplAlgParser;
 
-public class ApplAlgInterpreter {
+public class ApplAlgInterpreterUpstream {
 	
 	public static Hashtable<String,Function> functions;
 
@@ -26,7 +26,7 @@ public class ApplAlgInterpreter {
 //		ApplAlgParser parser = new ApplAlgParser(new File("appl_algs/Quersumme.apl"));
 //		ApplAlgParser parser = new ApplAlgParser(new File("appl_algs/BinarySearch.apl"));
 //		ApplAlgParser parser = new ApplAlgParser(new File("appl_algs/QuickSort3.apl"));
-		ApplAlgParser parser = new ApplAlgParser(new File(args[0]));
+		ApplAlgParser parser = new ApplAlgParser(new File("appl_algs/BubbleSort.apl"), true);
 //		ApplAlgParser parser = new ApplAlgParser(new File("appl_algs/Fibonacci.apl"));
 //		ApplAlgParser parser = new ApplAlgParser(new File("appl_algs/Fibonacci2.apl"));
 		

@@ -25,7 +25,7 @@ public class CallExpression extends Expression {
 
 	public Object evaluate(Hashtable<String,Object> params) throws Exception {
 		Object result = null;
-		Function f = ApplAlgInterpreter.functions.get(name);
+		Function f = ApplAlgInterpreterUpstream.functions.get(name);
 		
 		if (f == null) {
 			String message = getErrorMessageHeader() + "no definition found for function '" + name + "'.";
