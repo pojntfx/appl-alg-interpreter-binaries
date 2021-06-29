@@ -34,7 +34,7 @@ Additionally, you can set the following environment variables for additional deb
 Use them like so:
 
 ```shell
-$ IAPPL_DEBUG_PARSER=true IAPPL_DEBUG_PARSER=true iappl examples/Quersumme.apl
+$ IAPPL_DEBUG_PARSER=true IAPPL_PRINT_FUNCTIONS=true IAPPL_COUNT_FUNCTIONS=true iappl examples/Quersumme.apl
 ```
 
 See [examples](https://github.com/pojntfx/appl-alg-interpreter-binaries/blob/main/examples) for more example programs and grammar.
