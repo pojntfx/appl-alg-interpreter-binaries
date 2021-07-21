@@ -1,6 +1,6 @@
 
 
-## Wandelt Integerzahl in Binärdarstellung um
+## Wandelt Integerzahl in Binï¿½rdarstellung um
 
 main() = int2bin(147)
 #--------------------
